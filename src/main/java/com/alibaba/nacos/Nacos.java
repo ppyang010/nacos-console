@@ -32,6 +32,10 @@ import java.util.concurrent.*;
 public class Nacos {
 
     public static void main(String[] args) {
+        //  通过环境变量的形式 设置 单机启动
+        // 或者通过jvm启动参数  -Dnacos.standalone=true
+        System.setProperty("nacos.standalone", "true");
+
         SpringApplication.run(Nacos.class, args);
     }
 }
